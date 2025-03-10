@@ -10,8 +10,8 @@ Entrenamiento práctico en la plataforma Databricks con enfoque en las funcional
 
 | # | Temas | Duración |
 | -- | -- | -- |
-| 01 | Laboratório 01 - Creación de un Dashboard | 20 min |
-| 02 | Laboratório 02 - Creación de un Genie Space | 20 min |
+| 01 | Laboratório 01 - Creación de un Dashboard | 60 min |
+| 02 | Laboratório 02 - Creación de un Genie Space | 60 min |
 
 
 </br>
