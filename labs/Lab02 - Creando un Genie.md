@@ -18,8 +18,6 @@ El objetivo de este laboratorio es utilizar el AI/BI Genie para permitir el aná
 
 <img src="https://raw.githubusercontent.com/Databricks-BR/genie_ai_bi/main/images/genie_04.png">
 
-***En caso de que no lo haya hecho aún, cargue los datos según lo descrito en [Lab 01 - Importando los datos](https://github.com/Databricks-BR/genie_ai_bi/blob/main/01_LAB_importando_dados/README.md)***.
-
 </br></br>
 
 ## Ejercicio 03.01 - Crear AI/BI Genie
