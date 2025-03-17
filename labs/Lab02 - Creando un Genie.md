@@ -14,7 +14,7 @@ El objetivo de este laboratorio es utilizar el AI/BI Genie para permitir el aná
 
 ## Ejercicio 03.00 - Preparación
 
-1. En algunos momentos, utilizaremos el SQL Editor. Deje-lo preparado en una otra ventana y seleccione su base de datos.
+1. En algunos momentos, utilizaremos el SQL Editor. Déjelo preparado en una otra ventana y seleccione su base de datos.
 
 <img src="https://raw.githubusercontent.com/Databricks-BR/genie_ai_bi/main/images/genie_04.png">
 
@@ -48,9 +48,9 @@ Con nuestra Genie preparada, podemos comenzar a hacer nuestros análisis!
 
 Basta utilizar el chat para hacer las preguntas a continuación:
 
-- ¿Cuál es el faturamiento en oct/22?
+- ¿Cuál es la facturación en oct/22?
 - Ahora, desglose por producto
-- Mantenga solo los 10 productos con mayor faturamiento
+- Mantenga solo los 10 productos con mayor facturación
 - Monte un gráfico de barras
 - ¿Cuál es el total de productos vendidos en genéricos?
 - ¿Cuál es el valor total vendido de ansiolíticos?
@@ -59,7 +59,7 @@ Basta utilizar el chat para hacer las preguntas a continuación:
 <img src="https://raw.githubusercontent.com/Databricks-BR/genie_ai_bi/main/images/genie_05.png"><br><br>
 
 Noten que, incluso con muy poco contexto, la Genie ya pudo:
-- Inferir qué tablas y columnas relevantes para responder nuestras preguntas
+- Inferir qué tablas y columnas son relevantes para responder nuestras preguntas
 - Aplicar filtros y agregaciones
 - Responder preguntas adicionales sobre una respuesta anterior
 - Entender cómo utilizar jergas
@@ -72,7 +72,7 @@ Aprovechen para explorar y hacer preguntas adicionales!
 
 ## Ejercicio 03.03 - Utilizando comentarios
 
-Aun así, pueden ocurrir escenarios en los que precisemos proporcionar algún contexto adicional a la Genie para obtener respuestas más precisas.
+Aun así, pueden ocurrir escenarios en los que debamos proporcionar algún contexto adicional a la Genie para obtener respuestas más precisas.
 
 Ahora, vamos a explorar algunas formas de auxiliar a la Genie cuando identifiquemos alguna necesidad.
 
@@ -90,9 +90,9 @@ Vamos a ver cómo funciona:
 
 3. Haga nuevamente la pregunta anterior<br><br>
 
-Perceban que esta vez la Genie utilizó la columna correcta que contiene el nombre de la loja.
+Noten que esta vez la Genie utilizó la columna correcta que contiene el nombre de la loja.
 
-Documentar nuestras tablas con comentarios es siempre una buena práctica! Esto ayuda a la comprensión, la descubierta y el reaprovechamiento de esos datos por otras personas. Además, va a acabar ayudando a mejorar las respuestas de la Genie.
+Documentar nuestras tablas con comentarios es siempre una buena práctica! Esto ayuda a la comprensión, el descubrimiento y el reaprovechamiento de esos datos por otras personas. Además, termina de ayudar a mejorar las respuestas de la Genie.
 
 Sin embargo, nuestra consulta aún no retornó ningún resultado. Vamos a buscar una solución!
 
@@ -123,7 +123,7 @@ Como vimos, la Genie utiliza toda la documentación de nuestras tablas para pode
 
 Por eso, para complementar el conocimiento que la Genie ya posee sobre nuestras bases de datos, podemos también crear instrucciones!
 
-**Instrucciones** permiten guardarmos y parametrizar lógicas complejas dentro de nuestro catálogo para ser reutilizadas por otras personas y/o otras consultas de forma simple – inclusive fuera de la Genie. 
+Las **Instrucciones** permiten guardarnos y parametrizar lógicas complejas dentro de nuestro catálogo para ser reutilizadas por otras personas y/o otras consultas de forma simple – inclusive fuera de la Genie. 
 
 En nuestro contexto, las instrucciones también van a funcionar como herramientas validadas y certificadas por los equipos responsables que la Genie puede decidir utilizar en sus respuestas.
 
@@ -145,7 +145,7 @@ Vamos a ver en la práctica:
 
 ## (Opcional) Ejercicio 03.06 - Utilizando ejemplos de consultas
 
-En algunos casos, precisamos hacer cruces y cálculos bastante complejos para poder responder a nuestras preguntas y la Genie puede no entender cómo montar todo el razonamiento necesario.
+En algunos casos, debemos hacer cruces y cálculos bastante complejos para poder responder a nuestras preguntas y la Genie puede no entender cómo montar todo el razonamiento necesario.
 
 En esos casos, podemos proporcionar ejemplos de consultas validadas y certificadas por los equipos responsables. Este también es un mecanismo interesante para garantizar la precisión de las respuestas.
 
@@ -157,8 +157,8 @@ Vamos a ver cómo funciona:
 2. Aquí la Genie ya hizo una suma en ventana móvil, pero no quedó exactamente como queríamos. Entonces, agregue un ejemplo de consulta siguiendo los pasos a continuación:
     - Haga clic en `Instructions`, en el menú a la izquierda
     - Haga clic en `Add Example Query`
-    - Insira la pregunta anterior en el campo superior
-    - Insira la consulta a continuación en el campo inferior
+    - En el campo superior, ingresa la pregunta anterior
+    - En el campo inferior, ingresa la consulta SQL
         - `SELECT window.end AS dt_venda, SUM(vl_venda) FROM vendas GROUP BY WINDOW(dt_venda, '90 days', '1 day')`
 
 <img src="https://raw.githubusercontent.com/Databricks-BR/genie_ai_bi/main/images/genie_08.png">
@@ -173,7 +173,7 @@ Noten que ahora la Genie pudo responder correctamente a nuestra pregunta!
 
 Otro recurso que podemos utilizar para ayudar a la Genie con cálculos complejos son las funciones!
 
-**Funciones** permiten guardarmos y parametrizar lógicas complejas dentro de nuestro catálogo para ser reutilizadas por otras personas y/o otras consultas de forma simple – inclusive fuera de la Genie. 
+Las **Funciones** permiten guardarnos y parametrizar lógicas complejas dentro de nuestro catálogo para ser reutilizadas por otras personas y/o otras consultas de forma simple – inclusive fuera de la Genie. 
 
 En nuestro contexto, las funciones también van a funcionar como herramientas validadas y certificadas por los equipos responsables que la Genie puede decidir utilizar en sus respuestas.
 
